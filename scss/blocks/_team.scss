@@ -1,0 +1,123 @@
+.team {
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+.team__container {
+  position: relative;
+  padding-left: 66px;
+  padding-right: 66px;
+}
+.team__box {
+  background-image: url("../../img/bg-tile.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto;
+  max-width: 930px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.team__title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 13px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+  &::before {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: #ffd600;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.team__desc {
+  margin-top: 0;
+  margin-bottom: 21px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  color: #4d4d4d;
+}
+.team__list {
+  display: flex;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  overflow-x: hidden;
+}
+.team__item {
+  flex-shrink: 0;
+  margin-right: 50px;
+  &:last-child {
+    margin-right: 0;
+  }
+}
+.team__item-img {
+  margin-bottom: 15px;
+  display: block;
+  min-height: 350px;
+  width: 100%;
+  object-fit: cover;
+}
+.team__item-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.team__item-desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.team__pagination-btn {
+  width: 42px;
+  height: 48px;
+  padding: 0;
+  border: 2px solid #1d6ecb;
+  background-color: #ffffff;
+  background-position: center center;
+  background-repeat: no-repeat;
+  border-radius: 5px;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  z-index: 5;
+  &:hover {
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.team__pagination-btn--prev {
+  background-image: url("../img/prev-carusel.svg");
+  left: 20px;
+}
+.team__pagination-btn--next {
+  background-image: url("../img/carusel-next.svg");
+  right: 20px;
+}
+@include responsive(1024) {
+  .team__item {
+    width: 252px;
+  }
+}
+@include responsive(500) {
+  .team__pagination {
+    display: none;
+  }
+} ;

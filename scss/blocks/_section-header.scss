@@ -1,0 +1,39 @@
+.section-box {
+  text-align: center;
+  max-width: 530px;
+  width: 100%;
+  margin-bottom: 34px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: url("../../img/bg-tile.svg");
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.section-box__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+  position: relative;
+  &::before {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: #ffd600;
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+.section-box__desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #4d4d4d;
+}

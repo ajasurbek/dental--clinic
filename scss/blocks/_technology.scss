@@ -1,0 +1,197 @@
+.technology {
+  padding-top: 50px;
+  padding-bottom: 35px;
+}
+.technology__container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-right: 52px;
+  max-width: 100%;
+}
+.technology__right {
+  display: flex;
+  flex-direction: column;
+}
+.technology__item-box {
+  max-width: 510px;
+  widows: 100%;
+}
+.technology__img {
+  max-width: 560px;
+  width: 100%;
+  overflow: hidden;
+  margin-right: 105px;
+  object-fit: cover;
+  height: 613px;
+}
+.technology__box {
+  background-image: url("../../img/bg-tile.svg");
+  background-position: left top;
+  background-repeat: no-repeat;
+  background-size: auto;
+}
+.technology__title {
+  max-width: 500px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 12px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 42px;
+  color: #272727;
+  position: relative;
+  &::before {
+    content: "";
+    height: 3px;
+    width: 50px;
+    background-color: #ffd600;
+    position: absolute;
+    top: -16px;
+    left: 0;
+  }
+}
+.technology__desc {
+  max-width: 800px;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 32px;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #000000;
+}
+.technology__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+}
+.technology__item {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-start;
+  &:last-child {
+    margin-bottom: 0;
+  }
+  &::before {
+    flex-shrink: 0;
+    content: "";
+    width: 65px;
+    height: 65px;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-right: 30px;
+  }
+  &--expert::before {
+    background-image: url("../img/expert.png");
+  }
+  &--bolta::before {
+    background-image: url("../img/modern-tech.png");
+  }
+  &--manzil::before {
+    background-image: url("../img/location.png");
+  }
+}
+.technology__item-title {
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  color: #000000;
+}
+.technology__item-desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4d4d4d;
+}
+@include responsive(1440) {
+  .technology__container {
+    justify-content: flex-start;
+    padding-right: 30px;
+  }
+  .technology__img {
+    margin-right: 18px;
+  }
+  .technology__item-box {
+    max-width: 100%;
+  }
+}
+@include responsive(900) {
+  .technology__container {
+    padding-right: 0;
+    flex-direction: column;
+  }
+  .technology__right {
+    padding-left: 22px;
+    padding-right: 22px;
+  }
+  .technology__title {
+    &::before {
+      left: 0;
+    }
+  }
+  .technology__list {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .technology__item {
+    align-items: center;
+    flex-direction: row;
+    &::before {
+      margin-bottom: 0;
+      margin-right: 10px;
+    }
+  }
+  .technology__box {
+    background-position: left top;
+    text-align: left;
+    max-width: 100%;
+  }
+  .technology__item-box {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .technology__item-title {
+    margin-bottom: 0;
+    max-width: 250px;
+    width: 100%;
+  }
+  .technology__img {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 54px;
+    height: auto;
+  }
+}
+@include responsive(550) {
+  .technology__item-desc {
+    display: none;
+  }
+}
+@include responsive(375) {
+  .technology__img {
+    height: 301px;
+  }
+}
+@include retina-bg {
+  .technology__item {
+    &--expert::before {
+      background-image: url("../img/expert@2x.png");
+    }
+    &--bolta::before {
+      background-image: url("../img/modern-tech@2x.png");
+    }
+    &--manzil::before {
+      background-image: url("../img/location@2x.png");
+    }
+  }
+}

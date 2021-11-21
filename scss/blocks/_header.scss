@@ -1,0 +1,225 @@
+.header {
+  padding-top: 12px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  background-color: #ffffff;
+}
+.header__top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__top-tel {
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 29px;
+    height: 29px;
+    margin-right: 7px;
+    background-image: url("../img/phone.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.header__top-tel-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #272727;
+}
+.header__top-tel-link {
+  display: inline-block;
+  vertical-align: baseline;
+  text-decoration: none;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #272727;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+// .header__top-logo {
+// }
+.header__top-clock {
+  display: flex;
+  align-items: center;
+  &::before {
+    content: "";
+    width: 29px;
+    height: 29px;
+    margin-right: 7px;
+    background-image: url("../img/clock.png");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+.header__top-clock-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  color: #00b007;
+}
+.header__top-clock-time {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+  color: #272727;
+}
+.header__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0055b8;
+  border-radius: 5px;
+  padding: 20px 32px;
+  transform: translateY(50%);
+}
+.header__bottom-logo {
+  display: block;
+}
+.header__button-toggler {
+  display: none;
+}
+.header__bottom-logo-img {
+  display: block;
+}
+.header__bottom-lists {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__bottom-mobile {
+  display: none;
+}
+@include responsive(1024) {
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .header__container {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header__top {
+    display: none;
+  }
+  .header__bottom {
+    transform: none;
+    border-radius: 0;
+  }
+  .header__bottom-logo {
+    display: block;
+  }
+  .header__bottom-mobile {
+    display: block;
+    flex-grow: 1;
+  }
+}
+@include responsive(850) {
+  .header__bottom {
+    padding-top: 23px;
+    padding-bottom: 23px;
+  }
+  .header__bottom-mobile {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .header__button-toggler {
+    display: block;
+    width: 25px;
+    height: 22px;
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    background-image: url("../img/meu-toggler.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    transition: background-position 0.2s ease;
+  }
+  .header__bottom-lists {
+    display: none;
+  }
+  .header--open .header__button-toggler {
+    background-position: right center;
+  }
+  .header--open .header__bottom-lists {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding-bottom: 26px;
+    position: absolute;
+    top: 68px;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 68px);
+    background-color: #0055b8;
+  }
+  .header--open .header__socials {
+    justify-content: center;
+  }
+  // nojs
+  .header--nojs .header__bottom {
+    flex-direction: column;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .header--nojs .header__bottom-lists {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: static;
+  }
+  .header--nojs .header__bottom-mobile {
+    margin-bottom: 20px;
+  }
+  .header--nojs .header__socials {
+    justify-content: center;
+  }
+  .header--nojs .header__nav {
+    margin-bottom: 20px;
+  }
+  .header--nojs {
+    position: static;
+  }
+  .header--nojs .header__button-toggler {
+    display: none;
+  }
+}
+@include retina-bg {
+  .header__top-tel::before {
+    background-image: url("../img/phone@2x.png");
+  }
+  .header__top-clock::before {
+    background-image: url("../img/clock@2x.png");
+  }
+}

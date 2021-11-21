@@ -1,0 +1,102 @@
+.features {
+  position: relative;
+  padding-bottom: 40px;
+}
+.features__container {
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  margin-top: -100px;
+}
+.features__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style-type: none;
+  display: flex;
+}
+.features__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 300px;
+  width: 100%;
+  padding-top: 40px;
+  padding-bottom: 10px;
+  border-radius: 5px;
+  &::before {
+    content: "";
+    width: 86px;
+    height: 86px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-bottom: 18px;
+  }
+}
+.features__item--treatment {
+  background-color: #ffd600;
+  padding-left: 36px;
+  padding-right: 36px;
+  &::before {
+    background-image: url("../img/teeth-den.png");
+  }
+}
+.features__item--prosthetics {
+  background-color: #ffe040;
+  padding-right: 50px;
+  padding-left: 50px;
+  &::before {
+    background-image: url("../img/install.png");
+  }
+}
+.features__item-title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+}
+.features__item-desc {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 25px;
+  color: #272727;
+}
+.features__contact {
+  position: relative;
+}
+@include responsive(1160) {
+  .features__container {
+    padding: 0;
+  }
+}
+@include responsive(1120) {
+  .features__item--treatment {
+    display: none;
+  }
+}
+@include responsive(850) {
+  .features__container {
+    margin-top: 0;
+  }
+  .features__item--prosthetics {
+    display: none;
+  }
+  .features__contact {
+    max-width: 100%;
+    width: 100%;
+  }
+}
+@include retina-bg {
+  .features__item--treatment::before {
+    background-image: url("../img/teeth-den@2x.png");
+  }
+  .features__item--prosthetics::before {
+    background-image: url("../img/install@2x.png");
+  }
+} ;

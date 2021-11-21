@@ -1,0 +1,128 @@
+.intro {
+  position: relative;
+}
+.intro__slider {
+  bottom: 15%;
+  position: absolute;
+  z-index: 2;
+}
+.intro__slider-btn {
+  padding: 0;
+  background-color: #ffd600;
+  border-radius: 5px;
+  border: none;
+  height: 70px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active {
+    opacity: 0.6;
+  }
+}
+.intro__slider-btn--prev {
+  background-image: url("../../img/last.svg");
+  width: 42px;
+}
+.intro__slider-btn--next {
+  background-image: url("../../img/next.svg");
+  width: 70px;
+}
+.intro__list {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.intro__item {
+  position: relative;
+}
+.intro__box {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 550px;
+}
+.intro__desc {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+  line-height: 21px;
+  color: #272727;
+}
+.intro__title {
+  margin-top: 0;
+  margin-bottom: 27px;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 56px;
+  text-transform: uppercase;
+  color: #272727;
+}
+.intro__img {
+  display: block;
+  object-fit: cover;
+  height: 900px;
+}
+@include responsive(1100) {
+  .intro__img {
+    height: auto;
+  }
+}
+@include responsive(950) {
+  .intro__title {
+    font-size: 42px;
+  }
+}
+@include responsive(850) {
+  .intro__box {
+    position: static;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 0;
+    transform: none;
+  }
+  .intro__desc {
+    line-height: 25px;
+    margin-bottom: 18px;
+  }
+  .intro__title {
+    font-size: 30px;
+    line-height: 35px;
+    margin-bottom: 25px;
+  }
+  .intro__img {
+    position: static;
+    margin-bottom: 21px;
+  }
+  .intro__btn {
+    display: none;
+  }
+  .intro__slider {
+    bottom: 20%;
+  }
+}
+@include responsive(500) {
+  .intro__slider {
+    bottom: 24%;
+  }
+  .intro__slider-btn {
+    height: 44px;
+  }
+  .intro__slider-btn--prev {
+    width: 24px;
+  }
+  .intro__slider-btn--next {
+    width: 44px;
+  }
+}
+@include responsive(400) {
+  .intro__slider {
+    bottom: 30%;
+  }
+}

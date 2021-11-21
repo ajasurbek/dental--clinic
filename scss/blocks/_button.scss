@@ -1,0 +1,51 @@
+.btn {
+  display: inline-block;
+  vertical-align: baseline;
+  padding: 20px 110px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 21px;
+  cursor: pointer;
+  white-space: nowrap;
+  &--blue {
+    background-color: #0055b8;
+    color: #ffffff;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  &--small {
+    padding: 20px 86px;
+  }
+
+  &--outline {
+    border: 2px solid #0055b8;
+    background-color: #ffffff;
+    color: #4d4d4d;
+    padding: 20px 76px;
+    &:hover {
+      background: #0055b8;
+      border: 2px solid #0055b8;
+      color: #ffffff;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+  &--gold {
+    background-color: #ffd600;
+    color: #272727;
+    padding: 17px 63px;
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active {
+      opacity: 0.6;
+    }
+  }
+}
